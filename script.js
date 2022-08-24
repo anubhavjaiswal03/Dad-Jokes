@@ -1,6 +1,15 @@
 const jokeEl = document.getElementById('joke');
 const jokeBtn = document.getElementById('jokeBtn');
 
+jokeEl.addEventListener('transitionstart', () => {
+	console.log('Transition Started');
+});
+jokeEl.addEventListener('transitionrun', () => {
+	console.log('Transition Running');
+});
+jokeEl.addEventListener('transitionend', () => {
+	console.log('Transition Finished');
+});
 generateJoke();
 // Using .then()
 // function generateJoke() {
