@@ -28,7 +28,7 @@ async function generateJoke() {
 	const res = await fetch('https://icanhazdadjoke.com', config);
 	const data = await res.json();
 
-	jokeEl.innerHTML = data.joke;
+	jokeEl.innerText = data.joke;
 }
 
 jokeBtn.addEventListener('click', generateJoke);
