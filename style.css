@@ -24,6 +24,7 @@ body {
   text-align: center;
   max-width: 100%;
   width: 800px;
+  min-height: 250px;
 }
 
 h3 {
@@ -38,6 +39,7 @@ h3 {
   line-height: 40px;
   margin: 50px auto;
   max-width: 600px;
+  transition: all 300ms ease;
 }
 
 .btn {
