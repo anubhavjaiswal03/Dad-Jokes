@@ -1,3 +1,3 @@
 # Dad Jokes
 
-![Dad Jokes](dad-jokes.png).
+![Dad Jokes](dad-jokes.png)
