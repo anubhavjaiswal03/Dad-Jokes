@@ -1,6 +1,9 @@
 const jokeEl = document.getElementById('joke');
 const jokeBtn = document.getElementById('jokeBtn');
 
+var prevHeight = window.getComputedStyle(jokeEl).height;
+
+// console.log(prevHeight);
 generateJoke();
 // Using .then()
 // function generateJoke() {
@@ -27,15 +30,18 @@ async function generateJoke() {
 
 	const res = await fetch('https://icanhazdadjoke.com', config);
 	const data = await res.json();
-
+	console.log('prev: ', window.getComputedStyle(jokeEl).height);
 	jokeEl.innerText = data.joke;
+	jokeEl.classList.add('collapse');
 	expandElement(jokeEl, 'collapse');
 	jokeEl.removeAttribute('close');
 	jokeEl.setAttribute('open', '');
 }
 
 jokeBtn.addEventListener('click', () => {
-	expandElement(jokeEl, 'collapse');
+	jokeEl.removeAttribute('open');
+	jokeEl.setAttribute('close', '');
+	// expandElement(jokeEl, 'collapse');
 	generateJoke();
 });
 
@@ -44,12 +50,13 @@ function expandElement(elem, collapseClass) {
 	elem.style.height = '';
 	elem.style.transition = 'none';
 
-	const startHeight = window.getComputedStyle(elem).height;
-
+	const startHeight = prevHeight;
+	// console.log('start', startHeight);
 	// Remove the collapse class, and force a layout calculation to get the final height
-	elem.classList.toggle(collapseClass);
+	elem.classList.remove(collapseClass);
 	const height = window.getComputedStyle(elem).height;
-
+	console.log('next: ', height);
+	prevHeight = height;
 	// Set the start height to begin the transition
 	elem.style.height = startHeight;
 
@@ -67,4 +74,5 @@ function expandElement(elem, collapseClass) {
 		elem.style.height = '';
 		elem.removeEventListener('transitionend', arguments.callee);
 	});
+	console.log('----------------------------------------------');
 }

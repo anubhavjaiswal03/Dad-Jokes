@@ -44,7 +44,7 @@ h3 {
   transition: all 500ms ease-in-out;
 }
 .joke.collapse {
-  height: 0px;
+  height: 160px;
 }
 .joke[open] {
   animation: fade-in 500ms ease forwards;
