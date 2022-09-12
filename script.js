@@ -30,12 +30,16 @@ async function generateJoke() {
 
 	const res = await fetch('https://icanhazdadjoke.com', config);
 	const data = await res.json();
+
 	console.log('prev: ', window.getComputedStyle(jokeEl).height);
+
 	jokeEl.innerText = data.joke;
+
 	jokeEl.classList.add('collapse');
-	expandElement(jokeEl, 'collapse');
+
 	jokeEl.removeAttribute('close');
 	jokeEl.setAttribute('open', '');
+	expandElement(jokeEl, 'collapse');
 }
 
 jokeBtn.addEventListener('click', () => {
