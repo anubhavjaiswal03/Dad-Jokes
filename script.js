@@ -36,6 +36,5 @@ async function generateJoke() {
 jokeBtn.addEventListener('click', () => {
 	jokeEl.removeAttribute('open');
 	jokeEl.setAttribute('close', '');
-	document.querySelector('.container').classList.add('try');
 	generateJoke();
 });
