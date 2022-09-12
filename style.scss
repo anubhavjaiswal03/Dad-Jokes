@@ -47,12 +47,12 @@ h3 {
 	&.collapse {
 		height: 0px;
 	}
-	// &[open] {
-	// 	animation: fade-in 500ms ease forwards;
-	// }
-	// &[close] {
-	// 	animation: fade-out 500ms ease forwards;
-	// }
+	&[open] {
+		animation: fade-in 500ms ease forwards;
+	}
+	&[close] {
+		animation: fade-out 500ms ease forwards;
+	}
 }
 
 .btn {

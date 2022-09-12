@@ -29,6 +29,7 @@ async function generateJoke() {
 	const data = await res.json();
 
 	jokeEl.innerText = data.joke;
+	jokeEl.setAttribute('open', '');
 	expandElement(jokeEl, 'collapse');
 }
 

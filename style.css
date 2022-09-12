@@ -46,6 +46,12 @@ h3 {
 .joke.collapse {
   height: 0px;
 }
+.joke[open] {
+  animation: fade-in 500ms ease forwards;
+}
+.joke[close] {
+  animation: fade-out 500ms ease forwards;
+}
 
 .btn {
   background-color: #9f6de0;
