@@ -10,8 +10,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
+  height: calc(100vh - 20px);
   margin: 0;
   padding: 20px;
 }
@@ -23,7 +22,9 @@ body {
   padding: 50px 20px;
   text-align: center;
   width: 800px;
-  transition: all 500ms ease;
+  max-width: 100%;
+  transition: all 500ms ease-in-out;
+  height: auto;
 }
 
 h3 {
@@ -38,12 +39,12 @@ h3 {
   line-height: 40px;
   margin: 50px auto;
   max-width: 600px;
+  overflow: hidden;
+  height: auto;
+  transition: all 500ms ease-in-out;
 }
-.joke[open] {
-  animation: fade-in 500ms ease forwards;
-}
-.joke[close] {
-  animation: fade-out 500ms ease forwards;
+.joke.collapse {
+  height: 0px;
 }
 
 .btn {

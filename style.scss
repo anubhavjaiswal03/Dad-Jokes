@@ -11,8 +11,8 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
-	overflow: hidden;
+	height: calc(100vh - 20px);
+	// overflow: hidden;
 	margin: 0;
 	padding: 20px;
 }
@@ -24,7 +24,9 @@ body {
 	padding: 50px 20px;
 	text-align: center;
 	width: 800px;
-	transition: all 500ms ease;
+	max-width: 100%;
+	transition: all 500ms ease-in-out;
+	height: auto;
 }
 
 h3 {
@@ -39,12 +41,18 @@ h3 {
 	line-height: 40px;
 	margin: 50px auto;
 	max-width: 600px;
-	&[open] {
-		animation: fade-in 500ms ease forwards;
+	overflow: hidden;
+	height: auto;
+	transition: all 500ms ease-in-out;
+	&.collapse {
+		height: 0px;
 	}
-	&[close] {
-		animation: fade-out 500ms ease forwards;
-	}
+	// &[open] {
+	// 	animation: fade-in 500ms ease forwards;
+	// }
+	// &[close] {
+	// 	animation: fade-out 500ms ease forwards;
+	// }
 }
 
 .btn {
