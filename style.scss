@@ -45,7 +45,7 @@ h3 {
 	height: auto;
 	transition: all 500ms ease-in-out;
 	&.collapse {
-		height: 160px;
+		height: 40px;
 	}
 	&[open] {
 		animation: fade-in 500ms ease forwards;
