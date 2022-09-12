@@ -1,85 +1,85 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap';
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	background-color: #696de0;
-	font-family: 'Roboto', sans-serif;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	overflow: hidden;
-	margin: 0;
-	padding: 20px;
+  background-color: #696de0;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 20px;
 }
 
 .container {
-	background-color: white;
-	border-radius: 10px;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-	padding: 50px 20px;
-	text-align: center;
-	width: 800px;
-	max-width: 100%;
-	transition: all 500ms ease;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 50px 20px;
+  text-align: center;
+  width: 800px;
+  max-width: 100%;
+  transition: all 500ms ease;
 }
 
 h3 {
-	margin: 0;
-	opacity: 0.5;
-	letter-spacing: 2px;
+  margin: 0;
+  opacity: 0.5;
+  letter-spacing: 2px;
 }
 
 .joke {
-	font-size: 30px;
-	letter-spacing: 1px;
-	line-height: 40px;
-	margin: 50px auto;
-	max-width: 600px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  margin: 50px auto;
+  max-width: 600px;
 }
 .joke[open] {
-	animation: fade-in 500ms ease forwards;
+  animation: fade-in 500ms ease forwards;
 }
 .joke[close] {
-	animation: fade-out 500ms ease forwards;
+  animation: fade-out 500ms ease forwards;
 }
 
 .btn {
-	background-color: #9f6de0;
-	color: white;
-	border: 0;
-	border-radius: 10px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-	padding: 14px 40px;
-	font-size: 16px;
-	cursor: pointer;
+  background-color: #9f6de0;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 14px 40px;
+  font-size: 16px;
+  cursor: pointer;
 }
 .btn:focus {
-	outline: 0;
+  outline: 0;
 }
 .btn:active {
-	background-color: #794faf;
-	transform: scale(0.98);
+  background-color: #794faf;
+  transform: scale(0.98);
 }
 
 @keyframes fade-out {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes fade-in {
-	100% {
-		opacity: 1;
-	}
-	0% {
-		opacity: 0;
-	}
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
