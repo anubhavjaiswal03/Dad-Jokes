@@ -29,8 +29,9 @@ async function generateJoke() {
 	const data = await res.json();
 
 	jokeEl.innerText = data.joke;
-	jokeEl.setAttribute('open', '');
 	expandElement(jokeEl, 'collapse');
+	jokeEl.removeAttribute('close');
+	jokeEl.setAttribute('open', '');
 }
 
 jokeBtn.addEventListener('click', () => {
