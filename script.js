@@ -1,15 +1,6 @@
 const jokeEl = document.getElementById('joke');
 const jokeBtn = document.getElementById('jokeBtn');
 
-jokeEl.addEventListener('transitionstart', () => {
-	console.log('Transition Started');
-});
-jokeEl.addEventListener('transitionrun', () => {
-	console.log('Transition Running');
-});
-jokeEl.addEventListener('transitionend', () => {
-	console.log('Transition Finished');
-});
 generateJoke();
 // Using .then()
 // function generateJoke() {
@@ -37,7 +28,14 @@ async function generateJoke() {
 	const res = await fetch('https://icanhazdadjoke.com', config);
 	const data = await res.json();
 
+	jokeEl.removeAttribute('close');
+	jokeEl.setAttribute('open', '');
 	jokeEl.innerText = data.joke;
 }
 
-jokeBtn.addEventListener('click', generateJoke);
+jokeBtn.addEventListener('click', () => {
+	jokeEl.removeAttribute('open');
+	jokeEl.setAttribute('close', '');
+	document.querySelector('.container').classList.add('try');
+	generateJoke();
+});

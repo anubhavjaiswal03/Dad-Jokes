@@ -22,8 +22,8 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
   padding: 50px 20px;
   text-align: center;
-  max-width: 100%;
   width: 800px;
+  transition: all 500ms ease;
 }
 
 h3 {
@@ -38,6 +38,12 @@ h3 {
   line-height: 40px;
   margin: 50px auto;
   max-width: 600px;
+}
+.joke[open] {
+  animation: fade-in 500ms ease forwards;
+}
+.joke[close] {
+  animation: fade-out 500ms ease forwards;
 }
 
 .btn {
@@ -56,6 +62,23 @@ h3 {
 .btn:active {
   background-color: #794faf;
   transform: scale(0.98);
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
