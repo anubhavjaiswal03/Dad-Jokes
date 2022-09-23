@@ -40,7 +40,7 @@ async function generateJoke() {
 	setTimeout(() => {
 		jokeEl.removeAttribute('close');
 		jokeEl.setAttribute('open', '');
-	}, 500);
+	}, 400);
 }
 
 jokeBtn.addEventListener('click', () => {
