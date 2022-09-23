@@ -36,10 +36,10 @@ async function generateJoke() {
 	jokeEl.innerText = data.joke;
 
 	jokeEl.classList.add('collapse');
+	expandElement(jokeEl, 'collapse');
 
 	jokeEl.removeAttribute('close');
 	jokeEl.setAttribute('open', '');
-	expandElement(jokeEl, 'collapse');
 }
 
 jokeBtn.addEventListener('click', () => {
@@ -47,9 +47,7 @@ jokeBtn.addEventListener('click', () => {
 	jokeEl.setAttribute('close', '');
 	// expandElement(jokeEl, 'collapse');
 
-	setTimeout(() => {
-		generateJoke();
-	}, 300);
+	generateJoke();
 });
 
 function expandElement(elem, collapseClass) {
