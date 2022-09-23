@@ -37,9 +37,10 @@ async function generateJoke() {
 
 	jokeEl.classList.add('collapse');
 	expandElement(jokeEl, 'collapse');
-
-	jokeEl.removeAttribute('close');
-	jokeEl.setAttribute('open', '');
+	setTimeout(() => {
+		jokeEl.removeAttribute('close');
+		jokeEl.setAttribute('open', '');
+	}, 300);
 }
 
 jokeBtn.addEventListener('click', () => {
