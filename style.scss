@@ -49,10 +49,10 @@ h3 {
 		height: 40px;
 	}
 	&[open] {
-		animation: fade-in 300ms ease forwards;
+		animation: fade-in 300ms ease;
 	}
 	&[close] {
-		animation: fade-out 300ms ease forwards;
+		animation: fade-out 300ms ease;
 	}
 }
 

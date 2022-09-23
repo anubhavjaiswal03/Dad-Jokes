@@ -48,10 +48,10 @@ h3 {
   height: 40px;
 }
 .joke[open] {
-  animation: fade-in 300ms ease forwards;
+  animation: fade-in 300ms ease;
 }
 .joke[close] {
-  animation: fade-out 300ms ease forwards;
+  animation: fade-out 300ms ease;
 }
 
 .btn {
