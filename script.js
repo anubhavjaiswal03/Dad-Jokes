@@ -75,10 +75,10 @@ function expandElement(elem, collapseClass) {
 	});
 
 	// Clear the saved height values after the transition
-	// elem.addEventListener('transitionend', () => {
-	// 	elem.style.height = '';
-	// 	elem.removeEventListener('transitionend', arguments.callee);
-	// 	console.log('transition end');
-	// });
+	elem.addEventListener('transitionend', () => {
+		elem.style.height = '';
+		elem.removeEventListener('transitionend', arguments.callee);
+		console.log('transition end');
+	});
 	console.log('----------------------------------------------');
 }
