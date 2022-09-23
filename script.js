@@ -46,7 +46,10 @@ jokeBtn.addEventListener('click', () => {
 	jokeEl.removeAttribute('open');
 	jokeEl.setAttribute('close', '');
 	// expandElement(jokeEl, 'collapse');
-	generateJoke();
+
+	setTimeout(() => {
+		generateJoke();
+	}, 300);
 });
 
 function expandElement(elem, collapseClass) {
