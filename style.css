@@ -1,11 +1,19 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap';
+
+:root {
+  --primary: #1B1A17;
+  --secondary: #F0A500;
+  --tertiary: #E45826;
+  --accent: #E6D5B8;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #F0A500;
+  background-color: var(--primary);
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
@@ -17,7 +25,7 @@ body {
 }
 
 .container {
-  background-color: #E6D5B8;
+  background-color: var(--secondary);
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);;
   padding: 50px 20px;
@@ -55,8 +63,8 @@ h3 {
 }
 
 .btn {
-  background-color: #F0A500;
-  color: #E6D5B8;
+  background-color: var(--tertiary);
+  color: var(--accent);
   border: 0;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
@@ -68,7 +76,7 @@ h3 {
   outline: 0;
 }
 .btn:active {
-  background-color: #ffb923;
+  background-color: var(--tertiary);
   transform: scale(0.98);
 }
 
@@ -77,13 +85,13 @@ h3 {
   font-weight: 500;
   vertical-align: middle;
   text-align: center;
-  color: #1B1A17;
+  color: var(--accent);
 }
 .signature span {
   color: #E45826;
 }
 .signature a {
-  color: #1B1A17;
+  color: var(--primary);
 }
 
 @keyframes fade-out {
