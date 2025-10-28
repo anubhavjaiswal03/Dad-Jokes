@@ -1,4 +1,4 @@
-# Dad Jokes
+# Dad Jokes 😂
 
 Best Animation combines div height transition with text fade-in fade-out effect.
 Fetches a random joke from icanhazdadjoke.com.
